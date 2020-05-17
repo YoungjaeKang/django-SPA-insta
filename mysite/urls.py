@@ -17,9 +17,13 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
+from django.views.generic import TemplateView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', TemplateView.as_view(template_name='root.html'), name='root'),
+    # re_path를 쓰면 정규 표현식 때문에 '' 빈 문자열이 모든 url에 매칭됨
 ]
 
 if settings.DEBUG:
