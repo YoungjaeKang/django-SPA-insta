@@ -1,0 +1,18 @@
+{% load bootstrap4 %}
+
+{% block content %}
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons %}
+            <button type="submit" class="btn btn-primary">
+                {{ submit_label|default:"Submit" }}
+            </button>
+        {% endbuttons %}
+
+        {% comment %} <table>
+            {{ form }}
+        </table>
+        <input type="submit"> {% endcomment %}
+    </form>
+{% endblock %}
