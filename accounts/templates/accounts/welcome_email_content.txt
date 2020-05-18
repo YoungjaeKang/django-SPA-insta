@@ -1,0 +1,6 @@
+Welcome to toypanda-insta-clone!
+
+{{ user.first_name }}
+{{ user.last_name }}
+
+- toypanda
